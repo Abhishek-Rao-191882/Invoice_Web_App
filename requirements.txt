@@ -1,0 +1,32 @@
+-virtualenv invoicely_env
+-pip install django
+-pip install djoser   (for authentication)
+-pip install django-rest-framework
+-pip install django-cors-headers
+-now create a new django project
+-configure the project{
+    add cors allowed origins
+    rest_framework
+    installed apps (
+            'rest_framework',
+    'rest_framework.authtoken',
+    'corsheaders',
+    'djoser'
+    )
+    middleware{
+         'corsheaders.middleware.CorsMiddleware',
+    }
+}
+-add url(
+    path('api/v1/', include('djoser.urls')),
+    path('api/v1/', include('djoser.urls.authtoken'))
+)
+
+-npm install vue 
+-npm install bulma
+-vue create invoicely_vue
+-choose dependencies(
+    babel,router,vuex,css preloader,3.x preview, y,scss dart, dedicated, N
+)
+-npm install axios
+-npm install bulma
